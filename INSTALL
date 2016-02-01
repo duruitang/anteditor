@@ -1,0 +1,709 @@
+$ npm install --registry=https://registry.npm.taobao.org
+npm WARN package.json ueditor@1.4.3 No license field.
+npm WARN package.json Dependency 'grunt' exists in both dependencies and devDependencies, using 'grunt@^0.4.1' from dependencies
+npm WARN deprecated lodash@0.9.2: lodash@<2.0.0 is no longer maintained. Upgrade to lodash@^3.0.0
+npm WARN deprecated lodash@2.4.2: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^3.0.0
+
+> closurecompiler@1.5.2 install D:\GIT\ueditor\node_modules\grunt-closurecompiler\node_modules\closurecompiler
+> npm run-script configure
+
+
+> closurecompiler@1.5.2 configure D:\GIT\ueditor\node_modules\grunt-closurecompiler\node_modules\closurecompiler
+> node scripts/configure.js
+
+Configuring ClosureCompiler.js 1.5.2 ...
+
+  Downloading http://dl.google.com/closure-compiler/compiler-latest.tar.gz ...
+  | 0 / 5 mb
+  | 1 / 5 mb
+  | 2 / 5 mb
+  | 3 / 5 mb
+  | 4 / 5 mb
+  | 5 / 5 mb
+  ✔ Download complete: D:\GIT\ueditor\node_modules\grunt-closurecompiler\node_modules\closurecompiler\compiler\compiler.tar.gz (5 mb)
+
+  Unpacking D:\GIT\ueditor\node_modules\grunt-closurecompiler\node_modules\closurecompiler\compiler\compiler.tar.gz ...
+  | compiler.jar
+  | COPYING
+  | README.md
+  ✔ Unpack complete.
+
+  Configuring JRE ...
+  ✖ Global Java not found or outdated, downloading bundled JRE ...
+    Downloading http://bundled-openjdk-jre.googlecode.com/files/OpenJDK-JRE-7u6_24-win32.tar.gz ...
+    | 0 / 27 mb
+    | 1 / 27 mb
+    | 2 / 27 mb
+    | 3 / 27 mb
+    | 4 / 27 mb
+    | 5 / 27 mb
+    | 6 / 27 mb
+    | 7 / 27 mb
+    | 8 / 27 mb
+    | 9 / 27 mb
+    | 10 / 27 mb
+    | 11 / 27 mb
+    | 12 / 27 mb
+    | 13 / 27 mb
+    | 14 / 27 mb
+    | 15 / 27 mb
+    | 16 / 27 mb
+    | 17 / 27 mb
+    | 18 / 27 mb
+    | 19 / 27 mb
+    | 20 / 27 mb
+    | 21 / 27 mb
+    | 22 / 27 mb
+    | 23 / 27 mb
+    | 24 / 27 mb
+    | 25 / 27 mb
+    | 26 / 27 mb
+    | 27 / 27 mb
+    ✔ Download complete: D:\GIT\ueditor\node_modules\grunt-closurecompiler\node_modules\closurecompiler\jre\jre.tar.gz (27 mb)
+
+      Unpacking D:\GIT\ueditor\node_modules\grunt-closurecompiler\node_modules\closurecompiler\jre\jre.tar.gz ...
+      | ASSEMBLY_EXCEPTION
+      | LICENSE
+      | THIRD_PARTY_README
+      | bin/
+      | bin/attach.dll
+      | bin/awt.dll
+      | bin/client/
+      | bin/client/jvm.dll
+      | bin/client/Xusage.txt
+      | bin/dt_shmem.dll
+      | bin/dt_socket.dll
+      | bin/fontmanager.dll
+      | bin/freetype.dll
+      | bin/hprof.dll
+      | bin/instrument.dll
+      | bin/j2pcsc.dll
+      | bin/j2pkcs11.dll
+      | bin/jaas_nt.dll
+      | bin/java-rmi.exe
+      | bin/java.dll
+      | bin/java.exe
+      | bin/javaw.exe
+      | bin/java_crw_demo.dll
+      | bin/jawt.dll
+      | bin/jdwp.dll
+      | bin/jli.dll
+      | bin/jpeg.dll
+      | bin/jsdt.dll
+      | bin/jsound.dll
+      | bin/jsoundds.dll
+      | bin/keytool.exe
+      | bin/kinit.exe
+      | bin/klist.exe
+      | bin/ktab.exe
+      | bin/lcms.dll
+      | bin/management.dll
+      | bin/mlib_image.dll
+      | bin/msvcr100.dll
+      | bin/net.dll
+      | bin/nio.dll
+      | bin/npt.dll
+      | bin/orbd.exe
+      | bin/pack200.exe
+      | bin/policytool.exe
+      | bin/rmi.dll
+      | bin/rmid.exe
+      | bin/rmiregistry.exe
+      | bin/sawindbg.dll
+      | bin/server/
+      | bin/server/jvm.dll
+      | bin/server/Xusage.txt
+      | bin/servertool.exe
+      | bin/splashscreen.dll
+      | bin/sunec.dll
+      | bin/sunmscapi.dll
+      | bin/tnameserv.exe
+      | bin/unpack.dll
+      | bin/unpack200.exe
+      | bin/verify.dll
+      | bin/w2k_lsa_auth.dll
+      | bin/zip.dll
+      | lib/
+      | lib/applet/
+      | lib/calendars.properties
+      | lib/charsets.jar
+      | lib/classlist
+      | lib/cmm/
+      | lib/cmm/CIEXYZ.pf
+      | lib/cmm/GRAY.pf
+      | lib/cmm/LINEAR_RGB.pf
+      | lib/cmm/PYCC.pf
+      | lib/cmm/sRGB.pf
+      | lib/content-types.properties
+      | lib/currency.data
+      | lib/ext/
+      | lib/ext/dnsns.jar
+      | lib/ext/localedata.jar
+      | lib/ext/meta-index
+      | lib/ext/sunec.jar
+      | lib/ext/sunjce_provider.jar
+      | lib/ext/sunmscapi.jar
+      | lib/ext/sunpkcs11.jar
+      | lib/ext/zipfs.jar
+      | lib/flavormap.properties
+      | lib/fontconfig.bfc
+      | lib/fontconfig.properties.src
+      | lib/i386/
+      | lib/i386/jvm.cfg
+      | lib/images/
+      | lib/images/cursors/
+      | lib/images/cursors/cursors.properties
+      | lib/images/cursors/invalid32x32.gif
+      | lib/images/cursors/win32_CopyDrop32x32.gif
+      | lib/images/cursors/win32_CopyNoDrop32x32.gif
+      | lib/images/cursors/win32_LinkDrop32x32.gif
+      | lib/images/cursors/win32_LinkNoDrop32x32.gif
+      | lib/images/cursors/win32_MoveDrop32x32.gif
+      | lib/images/cursors/win32_MoveNoDrop32x32.gif
+      | lib/jce.jar
+      | lib/jsse.jar
+      | lib/jvm.hprof.txt
+      | lib/logging.properties
+      | lib/management/
+      | lib/management/jmxremote.access
+      | lib/management/jmxremote.password.template
+      | lib/management/management.properties
+      | lib/management/snmp.acl.template
+      | lib/management-agent.jar
+      | lib/meta-index
+      | lib/net.properties
+      | lib/psfont.properties.ja
+      | lib/psfontj2d.properties
+      | lib/resources.jar
+      | lib/rt.jar
+      | lib/security/
+      | lib/security/cacerts
+      | lib/security/java.policy
+      | lib/security/java.security
+      | lib/security/local_policy.jar
+      | lib/security/US_export_policy.jar
+      | lib/servicetag/
+      | lib/servicetag/jdk_header.png
+      | lib/sound.properties
+      | lib/tzmappings
+      | lib/zi/
+      | lib/zi/Africa/
+      | lib/zi/Africa/Abidjan
+      | lib/zi/Africa/Accra
+      | lib/zi/Africa/Addis_Ababa
+      | lib/zi/Africa/Algiers
+      | lib/zi/Africa/Asmara
+      | lib/zi/Africa/Bamako
+      | lib/zi/Africa/Bangui
+      | lib/zi/Africa/Banjul
+      | lib/zi/Africa/Bissau
+      | lib/zi/Africa/Blantyre
+      | lib/zi/Africa/Brazzaville
+      | lib/zi/Africa/Bujumbura
+      | lib/zi/Africa/Cairo
+      | lib/zi/Africa/Casablanca
+      | lib/zi/Africa/Ceuta
+      | lib/zi/Africa/Conakry
+      | lib/zi/Africa/Dakar
+      | lib/zi/Africa/Dar_es_Salaam
+      | lib/zi/Africa/Djibouti
+      | lib/zi/Africa/Douala
+      | lib/zi/Africa/El_Aaiun
+      | lib/zi/Africa/Freetown
+      | lib/zi/Africa/Gaborone
+      | lib/zi/Africa/Harare
+      | lib/zi/Africa/Johannesburg
+      | lib/zi/Africa/Juba
+      | lib/zi/Africa/Kampala
+      | lib/zi/Africa/Khartoum
+      | lib/zi/Africa/Kigali
+      | lib/zi/Africa/Kinshasa
+      | lib/zi/Africa/Lagos
+      | lib/zi/Africa/Libreville
+      | lib/zi/Africa/Lome
+      | lib/zi/Africa/Luanda
+      | lib/zi/Africa/Lubumbashi
+      | lib/zi/Africa/Lusaka
+      | lib/zi/Africa/Malabo
+      | lib/zi/Africa/Maputo
+      | lib/zi/Africa/Maseru
+      | lib/zi/Africa/Mbabane
+      | lib/zi/Africa/Mogadishu
+      | lib/zi/Africa/Monrovia
+      | lib/zi/Africa/Nairobi
+      | lib/zi/Africa/Ndjamena
+      | lib/zi/Africa/Niamey
+      | lib/zi/Africa/Nouakchott
+      | lib/zi/Africa/Ouagadougou
+      | lib/zi/Africa/Porto-Novo
+      | lib/zi/Africa/Sao_Tome
+      | lib/zi/Africa/Tripoli
+      | lib/zi/Africa/Tunis
+      | lib/zi/Africa/Windhoek
+      | lib/zi/America/
+      | lib/zi/America/Adak
+      | lib/zi/America/Anchorage
+      | lib/zi/America/Anguilla
+      | lib/zi/America/Antigua
+      | lib/zi/America/Araguaina
+      | lib/zi/America/Argentina/
+      | lib/zi/America/Argentina/Buenos_Aires
+      | lib/zi/America/Argentina/Catamarca
+      | lib/zi/America/Argentina/Cordoba
+      | lib/zi/America/Argentina/Jujuy
+      | lib/zi/America/Argentina/La_Rioja
+      | lib/zi/America/Argentina/Mendoza
+      | lib/zi/America/Argentina/Rio_Gallegos
+      | lib/zi/America/Argentina/Salta
+      | lib/zi/America/Argentina/San_Juan
+      | lib/zi/America/Argentina/San_Luis
+      | lib/zi/America/Argentina/Tucuman
+      | lib/zi/America/Argentina/Ushuaia
+      | lib/zi/America/Aruba
+      | lib/zi/America/Asuncion
+      | lib/zi/America/Atikokan
+      | lib/zi/America/Bahia
+      | lib/zi/America/Bahia_Banderas
+      | lib/zi/America/Barbados
+      | lib/zi/America/Belem
+      | lib/zi/America/Belize
+      | lib/zi/America/Blanc-Sablon
+      | lib/zi/America/Boa_Vista
+      | lib/zi/America/Bogota
+      | lib/zi/America/Boise
+      | lib/zi/America/Cambridge_Bay
+      | lib/zi/America/Campo_Grande
+      | lib/zi/America/Cancun
+      | lib/zi/America/Caracas
+      | lib/zi/America/Cayenne
+      | lib/zi/America/Cayman
+      | lib/zi/America/Chicago
+      | lib/zi/America/Chihuahua
+      | lib/zi/America/Costa_Rica
+      | lib/zi/America/Creston
+      | lib/zi/America/Cuiaba
+      | lib/zi/America/Curacao
+      | lib/zi/America/Danmarkshavn
+      | lib/zi/America/Dawson
+      | lib/zi/America/Dawson_Creek
+      | lib/zi/America/Denver
+      | lib/zi/America/Detroit
+      | lib/zi/America/Dominica
+      | lib/zi/America/Edmonton
+      | lib/zi/America/Eirunepe
+      | lib/zi/America/El_Salvador
+      | lib/zi/America/Fortaleza
+      | lib/zi/America/Glace_Bay
+      | lib/zi/America/Godthab
+      | lib/zi/America/Goose_Bay
+      | lib/zi/America/Grand_Turk
+      | lib/zi/America/Grenada
+      | lib/zi/America/Guadeloupe
+      | lib/zi/America/Guatemala
+      | lib/zi/America/Guayaquil
+      | lib/zi/America/Guyana
+      | lib/zi/America/Halifax
+      | lib/zi/America/Havana
+      | lib/zi/America/Hermosillo
+      | lib/zi/America/Indiana/
+      | lib/zi/America/Indiana/Indianapolis
+      | lib/zi/America/Indiana/Knox
+      | lib/zi/America/Indiana/Marengo
+      | lib/zi/America/Indiana/Petersburg
+      | lib/zi/America/Indiana/Tell_City
+      | lib/zi/America/Indiana/Vevay
+      | lib/zi/America/Indiana/Vincennes
+      | lib/zi/America/Indiana/Winamac
+      | lib/zi/America/Inuvik
+      | lib/zi/America/Iqaluit
+      | lib/zi/America/Jamaica
+      | lib/zi/America/Juneau
+      | lib/zi/America/Kentucky/
+      | lib/zi/America/Kentucky/Louisville
+      | lib/zi/America/Kentucky/Monticello
+      | lib/zi/America/La_Paz
+      | lib/zi/America/Lima
+      | lib/zi/America/Los_Angeles
+      | lib/zi/America/Maceio
+      | lib/zi/America/Managua
+      | lib/zi/America/Manaus
+      | lib/zi/America/Martinique
+      | lib/zi/America/Matamoros
+      | lib/zi/America/Mazatlan
+      | lib/zi/America/Menominee
+      | lib/zi/America/Merida
+      | lib/zi/America/Metlakatla
+      | lib/zi/America/Mexico_City
+      | lib/zi/America/Miquelon
+      | lib/zi/America/Moncton
+      | lib/zi/America/Monterrey
+      | lib/zi/America/Montevideo
+      | lib/zi/America/Montreal
+      | lib/zi/America/Montserrat
+      | lib/zi/America/Nassau
+      | lib/zi/America/New_York
+      | lib/zi/America/Nipigon
+      | lib/zi/America/Nome
+      | lib/zi/America/Noronha
+      | lib/zi/America/North_Dakota/
+      | lib/zi/America/North_Dakota/Beulah
+      | lib/zi/America/North_Dakota/Center
+      | lib/zi/America/North_Dakota/New_Salem
+      | lib/zi/America/Ojinaga
+      | lib/zi/America/Panama
+      | lib/zi/America/Pangnirtung
+      | lib/zi/America/Paramaribo
+      | lib/zi/America/Phoenix
+      | lib/zi/America/Port-au-Prince
+      | lib/zi/America/Porto_Velho
+      | lib/zi/America/Port_of_Spain
+      | lib/zi/America/Puerto_Rico
+      | lib/zi/America/Rainy_River
+      | lib/zi/America/Rankin_Inlet
+      | lib/zi/America/Recife
+      | lib/zi/America/Regina
+      | lib/zi/America/Resolute
+      | lib/zi/America/Rio_Branco
+      | lib/zi/America/Santarem
+      | lib/zi/America/Santa_Isabel
+      | lib/zi/America/Santiago
+      | lib/zi/America/Santo_Domingo
+      | lib/zi/America/Sao_Paulo
+      | lib/zi/America/Scoresbysund
+      | lib/zi/America/Sitka
+      | lib/zi/America/St_Johns
+      | lib/zi/America/St_Kitts
+      | lib/zi/America/St_Lucia
+      | lib/zi/America/St_Thomas
+      | lib/zi/America/St_Vincent
+      | lib/zi/America/Swift_Current
+      | lib/zi/America/Tegucigalpa
+      | lib/zi/America/Thule
+      | lib/zi/America/Thunder_Bay
+      | lib/zi/America/Tijuana
+      | lib/zi/America/Toronto
+      | lib/zi/America/Tortola
+      | lib/zi/America/Vancouver
+      | lib/zi/America/Whitehorse
+      | lib/zi/America/Winnipeg
+      | lib/zi/America/Yakutat
+      | lib/zi/America/Yellowknife
+      | lib/zi/Antarctica/
+      | lib/zi/Antarctica/Casey
+      | lib/zi/Antarctica/Davis
+      | lib/zi/Antarctica/DumontDUrville
+      | lib/zi/Antarctica/Macquarie
+      | lib/zi/Antarctica/Mawson
+      | lib/zi/Antarctica/McMurdo
+      | lib/zi/Antarctica/Palmer
+      | lib/zi/Antarctica/Rothera
+      | lib/zi/Antarctica/Syowa
+      | lib/zi/Antarctica/Vostok
+      | lib/zi/Asia/
+      | lib/zi/Asia/Aden
+      | lib/zi/Asia/Almaty
+      | lib/zi/Asia/Amman
+      | lib/zi/Asia/Anadyr
+      | lib/zi/Asia/Aqtau
+      | lib/zi/Asia/Aqtobe
+      | lib/zi/Asia/Ashgabat
+      | lib/zi/Asia/Baghdad
+      | lib/zi/Asia/Bahrain
+      | lib/zi/Asia/Baku
+      | lib/zi/Asia/Bangkok
+      | lib/zi/Asia/Beirut
+      | lib/zi/Asia/Bishkek
+      | lib/zi/Asia/Brunei
+      | lib/zi/Asia/Choibalsan
+      | lib/zi/Asia/Chongqing
+      | lib/zi/Asia/Colombo
+      | lib/zi/Asia/Damascus
+      | lib/zi/Asia/Dhaka
+      | lib/zi/Asia/Dili
+      | lib/zi/Asia/Dubai
+      | lib/zi/Asia/Dushanbe
+      | lib/zi/Asia/Gaza
+      | lib/zi/Asia/Harbin
+      | lib/zi/Asia/Hebron
+      | lib/zi/Asia/Hong_Kong
+      | lib/zi/Asia/Hovd
+      | lib/zi/Asia/Ho_Chi_Minh
+      | lib/zi/Asia/Irkutsk
+      | lib/zi/Asia/Jakarta
+      | lib/zi/Asia/Jayapura
+      | lib/zi/Asia/Jerusalem
+      | lib/zi/Asia/Kabul
+      | lib/zi/Asia/Kamchatka
+      | lib/zi/Asia/Karachi
+      | lib/zi/Asia/Kashgar
+      | lib/zi/Asia/Kathmandu
+      | lib/zi/Asia/Kolkata
+      | lib/zi/Asia/Krasnoyarsk
+      | lib/zi/Asia/Kuala_Lumpur
+      | lib/zi/Asia/Kuching
+      | lib/zi/Asia/Kuwait
+      | lib/zi/Asia/Macau
+      | lib/zi/Asia/Magadan
+      | lib/zi/Asia/Makassar
+      | lib/zi/Asia/Manila
+      | lib/zi/Asia/Muscat
+      | lib/zi/Asia/Nicosia
+      | lib/zi/Asia/Novokuznetsk
+      | lib/zi/Asia/Novosibirsk
+      | lib/zi/Asia/Omsk
+      | lib/zi/Asia/Oral
+      | lib/zi/Asia/Phnom_Penh
+      | lib/zi/Asia/Pontianak
+      | lib/zi/Asia/Pyongyang
+      | lib/zi/Asia/Qatar
+      | lib/zi/Asia/Qyzylorda
+      | lib/zi/Asia/Rangoon
+      | lib/zi/Asia/Riyadh
+      | lib/zi/Asia/Riyadh87
+      | lib/zi/Asia/Riyadh88
+      | lib/zi/Asia/Riyadh89
+      | lib/zi/Asia/Sakhalin
+      | lib/zi/Asia/Samarkand
+      | lib/zi/Asia/Seoul
+      | lib/zi/Asia/Shanghai
+      | lib/zi/Asia/Singapore
+      | lib/zi/Asia/Taipei
+      | lib/zi/Asia/Tashkent
+      | lib/zi/Asia/Tbilisi
+      | lib/zi/Asia/Tehran
+      | lib/zi/Asia/Thimphu
+      | lib/zi/Asia/Tokyo
+      | lib/zi/Asia/Ulaanbaatar
+      | lib/zi/Asia/Urumqi
+      | lib/zi/Asia/Vientiane
+      | lib/zi/Asia/Vladivostok
+      | lib/zi/Asia/Yakutsk
+      | lib/zi/Asia/Yekaterinburg
+      | lib/zi/Asia/Yerevan
+      | lib/zi/Atlantic/
+      | lib/zi/Atlantic/Azores
+      | lib/zi/Atlantic/Bermuda
+      | lib/zi/Atlantic/Canary
+      | lib/zi/Atlantic/Cape_Verde
+      | lib/zi/Atlantic/Faroe
+      | lib/zi/Atlantic/Madeira
+      | lib/zi/Atlantic/Reykjavik
+      | lib/zi/Atlantic/South_Georgia
+      | lib/zi/Atlantic/Stanley
+      | lib/zi/Atlantic/St_Helena
+      | lib/zi/Australia/
+      | lib/zi/Australia/Adelaide
+      | lib/zi/Australia/Brisbane
+      | lib/zi/Australia/Broken_Hill
+      | lib/zi/Australia/Currie
+      | lib/zi/Australia/Darwin
+      | lib/zi/Australia/Eucla
+      | lib/zi/Australia/Hobart
+      | lib/zi/Australia/Lindeman
+      | lib/zi/Australia/Lord_Howe
+      | lib/zi/Australia/Melbourne
+      | lib/zi/Australia/Perth
+      | lib/zi/Australia/Sydney
+      | lib/zi/CET
+      | lib/zi/CST6CDT
+      | lib/zi/EET
+      | lib/zi/EST
+      | lib/zi/EST5EDT
+      | lib/zi/Etc/
+      | lib/zi/Etc/GMT
+      | lib/zi/Etc/GMT+1
+      | lib/zi/Etc/GMT+10
+      | lib/zi/Etc/GMT+11
+      | lib/zi/Etc/GMT+12
+      | lib/zi/Etc/GMT+2
+      | lib/zi/Etc/GMT+3
+      | lib/zi/Etc/GMT+4
+      | lib/zi/Etc/GMT+5
+      | lib/zi/Etc/GMT+6
+      | lib/zi/Etc/GMT+7
+      | lib/zi/Etc/GMT+8
+      | lib/zi/Etc/GMT+9
+      | lib/zi/Etc/GMT-1
+      | lib/zi/Etc/GMT-10
+      | lib/zi/Etc/GMT-11
+      | lib/zi/Etc/GMT-12
+      | lib/zi/Etc/GMT-13
+      | lib/zi/Etc/GMT-14
+      | lib/zi/Etc/GMT-2
+      | lib/zi/Etc/GMT-3
+      | lib/zi/Etc/GMT-4
+      | lib/zi/Etc/GMT-5
+      | lib/zi/Etc/GMT-6
+      | lib/zi/Etc/GMT-7
+      | lib/zi/Etc/GMT-8
+      | lib/zi/Etc/GMT-9
+      | lib/zi/Etc/UCT
+      | lib/zi/Etc/UTC
+      | lib/zi/Europe/
+      | lib/zi/Europe/Amsterdam
+      | lib/zi/Europe/Andorra
+      | lib/zi/Europe/Athens
+      | lib/zi/Europe/Belgrade
+      | lib/zi/Europe/Berlin
+      | lib/zi/Europe/Brussels
+      | lib/zi/Europe/Bucharest
+      | lib/zi/Europe/Budapest
+      | lib/zi/Europe/Chisinau
+      | lib/zi/Europe/Copenhagen
+      | lib/zi/Europe/Dublin
+      | lib/zi/Europe/Gibraltar
+      | lib/zi/Europe/Helsinki
+      | lib/zi/Europe/Istanbul
+      | lib/zi/Europe/Kaliningrad
+      | lib/zi/Europe/Kiev
+      | lib/zi/Europe/Lisbon
+      | lib/zi/Europe/London
+      | lib/zi/Europe/Luxembourg
+      | lib/zi/Europe/Madrid
+      | lib/zi/Europe/Malta
+      | lib/zi/Europe/Minsk
+      | lib/zi/Europe/Monaco
+      | lib/zi/Europe/Moscow
+      | lib/zi/Europe/Oslo
+      | lib/zi/Europe/Paris
+      | lib/zi/Europe/Prague
+      | lib/zi/Europe/Riga
+      | lib/zi/Europe/Rome
+      | lib/zi/Europe/Samara
+      | lib/zi/Europe/Simferopol
+      | lib/zi/Europe/Sofia
+      | lib/zi/Europe/Stockholm
+      | lib/zi/Europe/Tallinn
+      | lib/zi/Europe/Tirane
+      | lib/zi/Europe/Uzhgorod
+      | lib/zi/Europe/Vaduz
+      | lib/zi/Europe/Vienna
+      | lib/zi/Europe/Vilnius
+      | lib/zi/Europe/Volgograd
+      | lib/zi/Europe/Warsaw
+      | lib/zi/Europe/Zaporozhye
+      | lib/zi/Europe/Zurich
+      | lib/zi/GMT
+      | lib/zi/HST
+      | lib/zi/Indian/
+      | lib/zi/Indian/Antananarivo
+      | lib/zi/Indian/Chagos
+      | lib/zi/Indian/Christmas
+      | lib/zi/Indian/Cocos
+      | lib/zi/Indian/Comoro
+      | lib/zi/Indian/Kerguelen
+      | lib/zi/Indian/Mahe
+      | lib/zi/Indian/Maldives
+      | lib/zi/Indian/Mauritius
+      | lib/zi/Indian/Mayotte
+      | lib/zi/Indian/Reunion
+      | lib/zi/MET
+      | lib/zi/MST
+      | lib/zi/MST7MDT
+      | lib/zi/Pacific/
+      | lib/zi/Pacific/Apia
+      | lib/zi/Pacific/Auckland
+      | lib/zi/Pacific/Chatham
+      | lib/zi/Pacific/Chuuk
+      | lib/zi/Pacific/Easter
+      | lib/zi/Pacific/Efate
+      | lib/zi/Pacific/Enderbury
+      | lib/zi/Pacific/Fakaofo
+      | lib/zi/Pacific/Fiji
+      | lib/zi/Pacific/Funafuti
+      | lib/zi/Pacific/Galapagos
+      | lib/zi/Pacific/Gambier
+      | lib/zi/Pacific/Guadalcanal
+      | lib/zi/Pacific/Guam
+      | lib/zi/Pacific/Honolulu
+      | lib/zi/Pacific/Johnston
+      | lib/zi/Pacific/Kiritimati
+      | lib/zi/Pacific/Kosrae
+      | lib/zi/Pacific/Kwajalein
+      | lib/zi/Pacific/Majuro
+      | lib/zi/Pacific/Marquesas
+      | lib/zi/Pacific/Midway
+      | lib/zi/Pacific/Nauru
+      | lib/zi/Pacific/Niue
+      | lib/zi/Pacific/Norfolk
+      | lib/zi/Pacific/Noumea
+      | lib/zi/Pacific/Pago_Pago
+      | lib/zi/Pacific/Palau
+      | lib/zi/Pacific/Pitcairn
+      | lib/zi/Pacific/Pohnpei
+      | lib/zi/Pacific/Port_Moresby
+      | lib/zi/Pacific/Rarotonga
+      | lib/zi/Pacific/Saipan
+      | lib/zi/Pacific/Tahiti
+      | lib/zi/Pacific/Tarawa
+      | lib/zi/Pacific/Tongatapu
+      | lib/zi/Pacific/Wake
+      | lib/zi/Pacific/Wallis
+      | lib/zi/PST8PDT
+      | lib/zi/SystemV/
+      | lib/zi/SystemV/AST4
+      | lib/zi/SystemV/AST4ADT
+      | lib/zi/SystemV/CST6
+      | lib/zi/SystemV/CST6CDT
+      | lib/zi/SystemV/EST5
+      | lib/zi/SystemV/EST5EDT
+      | lib/zi/SystemV/HST10
+      | lib/zi/SystemV/MST7
+      | lib/zi/SystemV/MST7MDT
+      | lib/zi/SystemV/PST8
+      | lib/zi/SystemV/PST8PDT
+      | lib/zi/SystemV/YST9
+      | lib/zi/SystemV/YST9YDT
+      | lib/zi/WET
+      | lib/zi/ZoneInfoMappings
+      ✔ Unpack complete.
+
+  Configuring bundled JRE for platform 'win32' ...
+  Complete (not necessary).
+
+  Testing bundled Java ...
+  | exec D:\GIT\ueditor\node_modules\grunt-closurecompiler\node_modules\closurecompiler\jre\bin\java.exe
+  ✔ Successfully called bundled Java!
+
+  ✔ ClosureCompiler.js has successfully been configured!
+
+grunt-text-replace@0.3.12 node_modules\grunt-text-replace
+
+grunt-contrib-concat@0.3.0 node_modules\grunt-contrib-concat
+
+grunt-contrib-copy@0.4.1 node_modules\grunt-contrib-copy
+
+grunt-transcoding@0.1.3 node_modules\grunt-transcoding
+└── iconv-lite@0.2.11
+
+grunt-contrib-clean@0.5.0 node_modules\grunt-contrib-clean
+└── rimraf@2.2.8
+
+grunt-contrib-cssmin@0.6.2 node_modules\grunt-contrib-cssmin
+├── clean-css@1.1.7 (commander@2.0.0)
+└── grunt-lib-contrib@0.6.1 (zlib-browserify@0.0.1)
+
+grunt@0.4.5 node_modules\grunt
+├── eventemitter2@0.4.14
+├── dateformat@1.0.2-1.2.3
+├── which@1.0.9
+├── colors@0.6.2
+├── getobject@0.1.0
+├── async@0.1.22
+├── lodash@0.9.2
+├── rimraf@2.2.8
+├── hooker@0.2.3
+├── grunt-legacy-util@0.2.0
+├── exit@0.1.2
+├── coffee-script@1.3.3
+├── iconv-lite@0.2.11
+├── underscore.string@2.2.1
+├── nopt@1.0.10 (abbrev@1.0.7)
+├── minimatch@0.2.14 (sigmund@1.0.1, lru-cache@2.7.3)
+├── glob@3.1.21 (inherits@1.0.2, graceful-fs@1.2.3)
+├── findup-sync@0.1.3 (lodash@2.4.2, glob@3.2.11)
+├── js-yaml@2.0.5 (esprima@1.0.4, argparse@0.1.16)
+└── grunt-legacy-log@0.1.3 (grunt-legacy-log-utils@0.1.1, lodash@2.4.2, underscore.string@2.3.3)
+
+grunt-closurecompiler@0.9.9 node_modules\grunt-closurecompiler
+└── closurecompiler@1.5.2 (closurecompiler-externs@1.0.4, bl@0.9.5, jsdoc@3.3.3, tar@0.1.20)

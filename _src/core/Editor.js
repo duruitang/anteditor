@@ -363,14 +363,6 @@
         /**
          * 渲染编辑器的DOM到指定容器
          * @method render
-         * @param { String } containerId 指定一个容器ID
-         * @remind 执行该方法,会触发ready事件
-         * @warning 必须且只能调用一次
-         */
-
-        /**
-         * 渲染编辑器的DOM到指定容器
-         * @method render
          * @param { Element } containerDom 直接指定容器对象
          * @remind 执行该方法,会触发ready事件
          * @warning 必须且只能调用一次
@@ -404,7 +396,7 @@
                 container.style.zIndex = options.zIndex;
 
                 var html = ( ie && browser.version < 9  ? '' : '<!DOCTYPE html>') +
-                    '<html xmlns=\'http://www.w3.org/1999/xhtml\' class=\'view\' ><head>' +
+                    '<html xmlns=\'http://www.w3.org/1999/xhtml\' class=\'view\'><head>' +
                     '<style type=\'text/css\'>' +
                     //设置四周的留边
                     '.view{padding:0;word-wrap:break-word;cursor:text;height:90%;}\n' +
@@ -413,10 +405,10 @@
                     'body{margin:8px;font-family:sans-serif;font-size:16px;}' +
                     //设置段落间距
                     'p{margin:5px 0;}</style>' +
-                    ( options.iframeCssUrl ? '<link rel=\'stylesheet\' type=\'text/css\' href=\'' + utils.unhtml(options.iframeCssUrl) + '\'/>' : '' ) +
+                    ( options.iframeCssUrl ? '<link rel=\'stylesheet\' href=\'' + utils.unhtml(options.iframeCssUrl) + '\'>' : '' ) +
                     (options.initialStyle ? '<style>' + options.initialStyle + '</style>' : '') +
-                    '</head><body class=\'view\' ></body>' +
-                    '<script type=\'text/javascript\' ' + (ie ? 'defer=\'defer\'' : '' ) +' id=\'_initialScript\'>' +
+                    '</head><body class=\'view\'></body>' +
+                    '<script ' + (ie ? 'defer=\'defer\'' : '' ) +' id=\'_initialScript\'>' +
                     'setTimeout(function(){editor = window.parent.UE.instants[\'ueditorInstant' + me.uid + '\'];editor._setup(document);},0);' +
                     'var _tmpScript = document.getElementById(\'_initialScript\');_tmpScript.parentNode.removeChild(_tmpScript);</script></html>';
                 container.appendChild(domUtils.createElement(document, 'iframe', {
@@ -441,7 +433,7 @@
                         options.minFrameHeight = options.initialFrameHeight = container.offsetHeight;
                         container.style.height = options.initialFrameHeight + 'px';
                     }
-                })
+                }, 300)
             }
         },
 
@@ -750,14 +742,13 @@
             if (browser.ie && browser.version > 8) {
                 var headHtmlForIE9 = '';
                 utils.each(me.document.styleSheets, function (si) {
-                    headHtmlForIE9 += ( si.href ? '<link rel="stylesheet" type="text/css" href="' + si.href + '" />' : '<style>' + si.cssText + '</style>');
+                    headHtmlForIE9 += ( si.href ? '<link rel="stylesheet" href="' + si.href + '">' : '<style>' + si.cssText + '</style>');
                 });
                 utils.each(me.document.getElementsByTagName('script'), function (si) {
                     headHtmlForIE9 += si.outerHTML;
                 });
-
             }
-            return '<html><head>' + (me.options.charset ? '<meta http-equiv="Content-Type" content="text/html; charset=' + me.options.charset + '"/>' : '')
+            return '<html><head>' + (me.options.charset ? '<meta http-equiv="Content-Type" content="text/html; charset=' + me.options.charset + '">' : '')
                 + (headHtmlForIE9 || me.document.getElementsByTagName('head')[0].innerHTML) + headHtml.join('\n') + '</head>'
                 + '<body ' + (ie && browser.version < 9 ? 'class="view"' : '') + '>' + me.getContent(null, null, true) + '</body></html>';
         },

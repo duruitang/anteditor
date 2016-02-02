@@ -1,7 +1,7 @@
 /*!
  * UEditor
  * version: ueditor
- * build: Tue Feb 02 2016 16:50:47 GMT+0800 (中国标准时间)
+ * build: Tue Feb 02 2016 18:34:55 GMT+0800 (中国标准时间)
  */
 
 (function(){
@@ -13120,30 +13120,37 @@ UE.plugins['insertcode'] = function() {
             me.document)
     });
     me.setOpt('insertcode',{
-            'as3':'ActionScript3',
-            'bash':'Bash/Shell',
-            'cpp':'C/C++',
-            'css':'Css',
-            'cf':'CodeFunction',
-            'c#':'C#',
-            'delphi':'Delphi',
-            'diff':'Diff',
-            'erlang':'Erlang',
-            'groovy':'Groovy',
-            'html':'Html',
-            'java':'Java',
-            'jfx':'JavaFx',
-            'js':'Javascript',
-            'pl':'Perl',
-            'php':'Php',
-            'plain':'Plain Text',
-            'ps':'PowerShell',
-            'python':'Python',
-            'ruby':'Ruby',
-            'scala':'Scala',
-            'sql':'Sql',
-            'vb':'Vb',
-            'xml':'Xml'
+        'basic': 'Basic',
+        'bash': 'Bash',
+        'clike': 'C/C++/C#',
+        'coffeescript': 'CoffeeScript',
+        'css': 'CSS',
+        'diff': 'Diff',
+        'docker': 'Docker',
+        'erlang': 'Erlang',
+        'git': 'Git',
+        'go': 'Go',
+        'markup': 'HTML/XML',
+        'java': 'Java',
+        'javascript': 'JavaScript',
+        'json': 'JSON',
+        'less': 'Less',
+        'lua': 'Lua',
+        'makefile': 'Makefile',
+        'markdown': 'Markdown',
+        'objectivec': 'Objective-C',
+        'php': 'PHP',
+        'powershell': 'PowerShell',
+        'python': 'Python',
+        'jsx': 'React JSX',
+        'ruby': 'Ruby',
+        'rust': 'Rust',
+        'sass': 'Sass',
+        'scala': 'Scala',
+        'sql': 'SQL',
+        'swift': 'Swift',
+        'typescript': 'TypeScript',
+        'yaml': 'YAML'
     });
 
     /**
@@ -13176,7 +13183,7 @@ UE.plugins['insertcode'] = function() {
                 rng = me.selection.getRange(),
                 pre = domUtils.findParentByTagName(rng.startContainer,'pre',true);
             if(pre){
-                pre.className = 'brush:'+lang+';toolbar:false;';
+                pre.className = 'prettyprint language-'+lang;
             }else{
                 var code = '';
                 if(rng.collapsed){
@@ -13245,7 +13252,7 @@ UE.plugins['insertcode'] = function() {
 
                             }else{
                                 code += (node.type == 'element' ? (dtd.$empty[node.tagName] ?  '' : node.innerText()) : node.data);
-                                if(!/br\/?\s*>$/.test(code)){
+                                if(!/br\s*\/?\s*>$/.test(code)){
                                     if(!node.nextSibling())
                                         return;
                                     code += '<br>'
@@ -13256,7 +13263,7 @@ UE.plugins['insertcode'] = function() {
 
                     });
                 }
-                me.execCommand('inserthtml','<pre id="coder" class="brush:'+lang+';toolbar:false">'+code+'</pre>',true);
+                me.execCommand('inserthtml','<pre id="coder" class="prettyprint language-'+lang+'">'+code+'</pre>',true);
 
                 pre = me.document.getElementById('coder');
                 domUtils.removeAttributes(pre,'id');
@@ -13279,7 +13286,7 @@ UE.plugins['insertcode'] = function() {
             var lang = '';
             utils.each(path,function(node){
                 if(node.nodeName =='PRE'){
-                    var match = node.className.match(/brush:([^;]+)/);
+                    var match = node.className.match(/language-([^\s]+)/);
                     lang = match && match[1] ? match[1] : '';
                     return false;
                 }
@@ -27618,7 +27625,7 @@ UE.ui = baidu.editor.ui = {};
 
 
 // adapter/editorui.js
-//ui跟编辑器的适配層
+//ui跟编辑器的适配器
 //那个按钮弹出是dialog，是下拉筐等都是在这个js中配置
 //自己写的ui也要在这里配置，放到baidu.editor.ui下边，当编辑器实例化的时候会根据ueditor.config中的toolbars找到相应的进行实例化
 (function () {

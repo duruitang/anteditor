@@ -1,10 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title></title>
-        <style type="text/css">
+        <style>
             *{color: #838383;margin: 0;padding: 0}
             html,body {font-size: 12px;overflow: hidden; }
             .content{padding:5px 0 0 15px;}
@@ -15,8 +14,8 @@
         <div class="content">
             <span><var id="lang_input_anchorName"></var></span><input id="anchorName"  value="" />
         </div>
-        <script type="text/javascript" src="../internal.js"></script>
-        <script type="text/javascript">
+        <script src="../internal.js"></script>
+        <script>
             var anchorInput = $G('anchorName'),
                 node = editor.selection.getRange().getClosedNode();
             if(node && node.tagName == 'IMG' && (node = node.getAttribute('anchorname'))){

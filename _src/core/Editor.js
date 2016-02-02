@@ -396,8 +396,8 @@
                 container.style.zIndex = options.zIndex;
 
                 var html = ( ie && browser.version < 9  ? '' : '<!DOCTYPE html>') +
-                    '<html xmlns=\'http://www.w3.org/1999/xhtml\' class=\'view\'><head>' +
-                    '<style type=\'text/css\'>' +
+                    '<html class=\'view\'><head>' +
+                    '<style>' +
                     //设置四周的留边
                     '.view{padding:0;word-wrap:break-word;cursor:text;height:90%;}\n' +
                     //设置默认字体和字号
@@ -433,7 +433,7 @@
                         options.minFrameHeight = options.initialFrameHeight = container.offsetHeight;
                         container.style.height = options.initialFrameHeight + 'px';
                     }
-                }, 300)
+                }, 0)
             }
         },
 

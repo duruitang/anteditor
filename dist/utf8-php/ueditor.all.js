@@ -1,7 +1,7 @@
 /*!
  * UEditor
  * version: ueditor
- * build: Tue Feb 02 2016 15:31:28 GMT+0800 (中国标准时间)
+ * build: Tue Feb 02 2016 16:27:05 GMT+0800 (中国标准时间)
  */
 
 (function(){
@@ -6887,8 +6887,8 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 container.style.zIndex = options.zIndex;
 
                 var html = ( ie && browser.version < 9  ? '' : '<!DOCTYPE html>') +
-                    '<html xmlns=\'http://www.w3.org/1999/xhtml\' class=\'view\'><head>' +
-                    '<style type=\'text/css\'>' +
+                    '<html class=\'view\'><head>' +
+                    '<style>' +
                     //设置四周的留边
                     '.view{padding:0;word-wrap:break-word;cursor:text;height:90%;}\n' +
                     //设置默认字体和字号
@@ -6924,7 +6924,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         options.minFrameHeight = options.initialFrameHeight = container.offsetHeight;
                         container.style.height = options.initialFrameHeight + 'px';
                     }
-                }, 300)
+                }, 0)
             }
         },
 
@@ -13180,7 +13180,7 @@ UE.plugins['insertcode'] = function() {
             }else{
                 var code = '';
                 if(rng.collapsed){
-                    code = browser.ie && browser.ie11below ? (browser.version <= 8 ? '&nbsp;':''):'<br/>';
+                    code = browser.ie && browser.ie11below ? (browser.version <= 8 ? '&nbsp;':''):'<br>';
                 }else{
                     var frag = rng.extractContents();
                     var div = me.document.createElement('div');
@@ -13256,7 +13256,7 @@ UE.plugins['insertcode'] = function() {
 
                     });
                 }
-                me.execCommand('inserthtml','<pre id="coder"class="brush:'+lang+';toolbar:false">'+code+'</pre>',true);
+                me.execCommand('inserthtml','<pre id="coder" class="brush:'+lang+';toolbar:false">'+code+'</pre>',true);
 
                 pre = me.document.getElementById('coder');
                 domUtils.removeAttributes(pre,'id');
@@ -13273,9 +13273,6 @@ UE.plugins['insertcode'] = function() {
                     rng.selectNodeContents(pre).select()
                 }
             }
-
-
-
         },
         queryCommandValue : function(){
             var path = this.selection.getStartElementPath();
@@ -16313,11 +16310,11 @@ UE.plugins['list'] = function () {
                     //重置getContent，源码模式下取值也能是最新的数据
                     oldGetContent = me.getContent;
                     me.getContent = function (){
-                        return sourceEditor.getContent() || '<p>' + (browser.ie ? '' : '<br/>')+'</p>';
+                        return sourceEditor.getContent() || '<p>' + (browser.ie ? '' : '<br>')+'</p>';
                     };
                 } else {
                     me.iframe.style.cssText = bakCssText;
-                    var cont = sourceEditor.getContent() || '<p>' + (browser.ie ? '' : '<br/>')+'</p>';
+                    var cont = sourceEditor.getContent() || '<p>' + (browser.ie ? '' : '<br>')+'</p>';
                     //处理掉block节点前后的空格,有可能会误命中，暂时不考虑
                     cont = cont.replace(new RegExp('[\\r\\t\\n ]*<\/?(\\w+)\\s*(?:[^>]*)>','g'), function(a,b){
                         if(b && !dtd.$inlineWithA[b.toLowerCase()]){

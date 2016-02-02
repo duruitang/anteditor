@@ -147,7 +147,7 @@ UE.plugins['insertcode'] = function() {
 
                     });
                 }
-                me.execCommand('inserthtml','<pre id="coder" class="brush:'+lang+';toolbar:false"><code>'+code+'</code></pre>',true);
+                me.execCommand('inserthtml','<pre id="coder" class="brush:'+lang+';toolbar:false">'+code+'</pre>',true);
 
                 pre = me.document.getElementById('coder');
                 domUtils.removeAttributes(pre,'id');
@@ -209,7 +209,8 @@ UE.plugins['insertcode'] = function() {
                if(n.type == 'text'){
                    //在ie下文本内容有可能末尾带有\n要去掉
                    //trace:3396
-                   code += n.data.replace(/[ ]/g,'&nbsp;').replace(/\n$/,'');
+//                   code += n.data.replace(/[ ]/g,'&nbsp;').replace(/\n$/,'');不要增加额外的&nbsp;
+                   code += n.data.replace(/\n$/,'');
                }else{
                    if(n.tagName == 'br'){
                        code  += '\n'

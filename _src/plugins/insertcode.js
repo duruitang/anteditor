@@ -71,7 +71,7 @@ UE.plugins['insertcode'] = function() {
             }else{
                 var code = '';
                 if(rng.collapsed){
-                    code = browser.ie && browser.ie11below ? (browser.version <= 8 ? '&nbsp;':''):'<br/>';
+                    code = browser.ie && browser.ie11below ? (browser.version <= 8 ? '&nbsp;':''):'<br>';
                 }else{
                     var frag = rng.extractContents();
                     var div = me.document.createElement('div');
@@ -147,7 +147,7 @@ UE.plugins['insertcode'] = function() {
 
                     });
                 }
-                me.execCommand('inserthtml','<pre id="coder"class="brush:'+lang+';toolbar:false">'+code+'</pre>',true);
+                me.execCommand('inserthtml','<pre id="coder" class="brush:'+lang+';toolbar:false"><code>'+code+'</code></pre>',true);
 
                 pre = me.document.getElementById('coder');
                 domUtils.removeAttributes(pre,'id');
@@ -164,9 +164,6 @@ UE.plugins['insertcode'] = function() {
                     rng.selectNodeContents(pre).select()
                 }
             }
-
-
-
         },
         queryCommandValue : function(){
             var path = this.selection.getStartElementPath();

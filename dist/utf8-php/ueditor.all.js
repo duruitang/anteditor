@@ -1,7 +1,7 @@
 /*!
  * UEditor
  * version: ueditor
- * build: Tue Feb 02 2016 16:27:05 GMT+0800 (中国标准时间)
+ * build: Tue Feb 02 2016 16:39:41 GMT+0800 (中国标准时间)
  */
 
 (function(){
@@ -13318,7 +13318,8 @@ UE.plugins['insertcode'] = function() {
                if(n.type == 'text'){
                    //在ie下文本内容有可能末尾带有\n要去掉
                    //trace:3396
-                   code += n.data.replace(/[ ]/g,'&nbsp;').replace(/\n$/,'');
+//                   code += n.data.replace(/[ ]/g,'&nbsp;').replace(/\n$/,'');不要增加额外的&nbsp;
+                   code += n.data.replace(/\n$/,'');
                }else{
                    if(n.tagName == 'br'){
                        code  += '\n'

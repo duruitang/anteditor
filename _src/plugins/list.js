@@ -250,7 +250,7 @@ UE.plugins['list'] = function () {
             //trace:3357
             //p不能为空
             if (!tmpP.firstChild()) {
-                tmpP.innerHTML(browser.ie ? '&nbsp;' : '<br/>')
+                tmpP.innerHTML(browser.ie ? '&nbsp;' : '<br>')
             }
             //去掉末尾的空白
             var p = li.firstChild();
@@ -697,7 +697,7 @@ UE.plugins['list'] = function () {
 
                                 span = me.document.createElement('span');
                                 range.insertNode(span);
-                                //判断pre是否是空的节点,如果是<p><br/></p>类型的空节点，干掉p标签防止它占位
+                                //判断pre是否是空的节点,如果是<p><br></p>类型的空节点，干掉p标签防止它占位
                                 if (domUtils.isEmptyBlock(pre)) {
                                     pre.innerHTML = '';
                                 }

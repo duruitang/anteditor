@@ -327,7 +327,7 @@
             }
         },
         setCellContent:function (cell, content) {
-            cell.innerHTML = content || (browser.ie ? domUtils.fillChar : "<br />");
+            cell.innerHTML = content || (browser.ie ? domUtils.fillChar : "<br>");
         },
         cloneCell:UETable.cloneCell,
         /**

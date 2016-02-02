@@ -64,7 +64,7 @@ UE.commands['inserthtml'] = {
             }
             range.txtToElmBoundary();
             //结束边界可能放到了br的前边，要把br包含进来
-            // x[xxx]<br/>
+            // x[xxx]<br>
             if(range.endContainer && range.endContainer.nodeType == 1){
                 tmpNode = range.endContainer.childNodes[range.endOffset];
                 if(tmpNode && domUtils.isBr(tmpNode)){
@@ -76,7 +76,7 @@ UE.commands['inserthtml'] = {
                 if(domUtils.isBoundaryNode(tmpNode,'firstChild') ){
                     tmpNode = range.endContainer;
                     if(range.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValue.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
-                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br/>')+'</p>';
+                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br>')+'</p>';
                         range.setStart(me.body.firstChild,0).collapse(true)
 
                     }
@@ -228,7 +228,7 @@ UE.commands['inserthtml'] = {
                 }else{
 
                     try{
-                        child.innerHTML = browser.ie ? domUtils.fillChar : '<br/>';
+                        child.innerHTML = browser.ie ? domUtils.fillChar : '<br>';
                     }catch(e){
                         range.setStartBefore(child);
                         domUtils.remove(child)

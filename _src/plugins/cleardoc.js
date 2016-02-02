@@ -22,10 +22,10 @@ UE.commands['cleardoc'] = {
             enterTag = me.options.enterTag,
             range = me.selection.getRange();
         if(enterTag == "br"){
-            me.body.innerHTML = "<br/>";
+            me.body.innerHTML = "<br>";
             range.setStart(me.body,0).setCursor();
         }else{
-            me.body.innerHTML = "<p>"+(ie ? "" : "<br/>")+"</p>";
+            me.body.innerHTML = "<p>"+(ie ? "" : "<br>")+"</p>";
             range.setStart(me.body.firstChild,0).setCursor(false,true);
         }
         setTimeout(function(){

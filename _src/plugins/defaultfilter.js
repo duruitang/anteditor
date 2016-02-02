@@ -99,7 +99,7 @@ UE.plugins['defaultfilter'] = function () {
                             }
                         });
                         if (!node.firstChild()) {
-                            node.innerHTML(browser.ie ? '&nbsp;' : '<br/>')
+                            node.innerHTML(browser.ie ? '&nbsp;' : '<br>')
                         }
                         break;
                     case 'div':

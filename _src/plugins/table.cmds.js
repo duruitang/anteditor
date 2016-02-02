@@ -34,7 +34,7 @@
                 for (var r = 0; r < rowsNum; r++) {
                     html.push('<tr' + (r == 0 ? ' class="firstRow"':'') + '>');
                     for (var c = 0; c < colsNum; c++) {
-                        html.push('<td width="' + tdWidth + '"  vAlign="' + opt.tdvalign + '" >' + (browser.ie && browser.version < 11 ? domUtils.fillChar : '<br/>') + '</td>')
+                        html.push('<td width="' + tdWidth + '"  vAlign="' + opt.tdvalign + '" >' + (browser.ie && browser.version < 11 ? domUtils.fillChar : '<br>') + '</td>')
                     }
                     html.push('</tr>')
                 }
@@ -74,7 +74,7 @@
             var table = getTableItemsByRange(this).table;
             if (table) {
                 var p = this.document.createElement("p");
-                p.innerHTML = browser.ie ? '&nbsp;' : '<br />';
+                p.innerHTML = browser.ie ? '&nbsp;' : '<br>';
                 table.parentNode.insertBefore(p, table);
                 this.selection.getRange().setStart(p, 0).setCursor();
             }
@@ -93,7 +93,7 @@
                 var next = table.nextSibling;
                 if (!next) {
                     next = domUtils.createElement(this.document, 'p', {
-                        'innerHTML': browser.ie ? domUtils.fillChar : '<br/>'
+                        'innerHTML': browser.ie ? domUtils.fillChar : '<br>'
                     });
                     table.parentNode.insertBefore(next, table);
                 }
@@ -149,7 +149,7 @@
             var table = getTableItemsByRange(this).table;
             if (table) {
                 var caption = this.document.createElement('caption');
-                caption.innerHTML = browser.ie ? domUtils.fillChar : '<br/>';
+                caption.innerHTML = browser.ie ? domUtils.fillChar : '<br>';
                 table.insertBefore(caption, table.firstChild);
                 var range = this.selection.getRange();
                 range.setStart(caption, 0).setCursor();

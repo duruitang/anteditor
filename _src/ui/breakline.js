@@ -11,7 +11,7 @@
             this.initUIBase();
         },
         getHtmlTpl: function (){
-            return '<br/>';
+            return '<br>';
         }
     };
     utils.inherits(Breakline, UIBase);

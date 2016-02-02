@@ -26,7 +26,7 @@ UE.plugins['keystrokes'] = function() {
             }
             rng.txtToElmBoundary();
             //结束边界可能放到了br的前边，要把br包含进来
-            // x[xxx]<br/>
+            // x[xxx]<br>
             if(rng.endContainer && rng.endContainer.nodeType == 1){
                 tmpNode = rng.endContainer.childNodes[rng.endOffset];
                 if(tmpNode && domUtils.isBr(tmpNode)){
@@ -39,7 +39,7 @@ UE.plugins['keystrokes'] = function() {
                     tmpNode = rng.endContainer;
                     if(rng.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValue.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
                         me.fireEvent('saveScene');
-                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br/>')+'</p>';
+                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br>')+'</p>';
                         rng.setStart(me.body.firstChild,0).setCursor(false,true);
                         me._selectionChange();
                         return;
@@ -188,7 +188,7 @@ UE.plugins['keystrokes'] = function() {
                 //处理当删除到body时，要重新给p标签展位
                 if(domUtils.isBody(rng.startContainer)){
                     var tmpNode = domUtils.createElement(me.document,'p',{
-                        'innerHTML' : browser.ie ? domUtils.fillChar : '<br/>'
+                        'innerHTML' : browser.ie ? domUtils.fillChar : '<br>'
                     });
                     rng.insertNode(tmpNode).setStart(tmpNode,0).setCursor(false,true);
                 }

@@ -214,7 +214,7 @@
                     var first = me.body.firstChild;
                     //trace:1106 都删除空了，下边会报错，所以补充一个p占位
                     if(!first){
-                        me.body.innerHTML = '<p>'+(browser.ie?'':'<br/>')+'</p>';
+                        me.body.innerHTML = '<p>'+(browser.ie?'':'<br>')+'</p>';
                         first = me.body.firstChild;
                     }
 

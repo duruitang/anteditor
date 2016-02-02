@@ -1,7 +1,7 @@
 /*!
  * UEditor
  * version: ueditor
- * build: Tue Feb 02 2016 16:39:41 GMT+0800 (中国标准时间)
+ * build: Tue Feb 02 2016 16:50:47 GMT+0800 (中国标准时间)
  */
 
 (function(){
@@ -4246,7 +4246,7 @@ var domUtils = dom.domUtils = {
         }
         return true;
     },
-    fillHtml :  browser.ie11below ? '&nbsp;' : '<br/>'
+    fillHtml :  browser.ie11below ? '&nbsp;' : '<br>'
 };
 var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
@@ -6988,7 +6988,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             //编辑器不能为空内容
 
             if (domUtils.isEmptyNode(me.body)) {
-                me.body.innerHTML = '<p>' + (browser.ie ? '' : '<br/>') + '</p>';
+                me.body.innerHTML = '<p>' + (browser.ie ? '' : '<br>') + '</p>';
             }
             //如果要求focus, 就把光标定位到内容开始
             if (options.focus) {
@@ -7331,7 +7331,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                         domUtils.isCustomeNode(child)
                         )
                     && child === this.body.lastChild) {
-                    this.body.innerHTML = '<p>' + (browser.ie ? '&nbsp;' : '<br/>') + '</p>' + this.body.innerHTML;
+                    this.body.innerHTML = '<p>' + (browser.ie ? '&nbsp;' : '<br>') + '</p>' + this.body.innerHTML;
 
                 } else {
                     var p = me.document.createElement('p');
@@ -7786,7 +7786,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             function clear() {
                 var me = this;
                 if (me.document.getElementById('initContent')) {
-                    me.body.innerHTML = '<p>' + (ie ? '' : '<br/>') + '</p>';
+                    me.body.innerHTML = '<p>' + (ie ? '' : '<br>') + '</p>';
                     me.removeListener('firstBeforeExecCommand focus', clear);
                     setTimeout(function () {
                         me.focus();
@@ -10034,7 +10034,7 @@ UE.plugins['defaultfilter'] = function () {
                             }
                         });
                         if (!node.firstChild()) {
-                            node.innerHTML(browser.ie ? '&nbsp;' : '<br/>')
+                            node.innerHTML(browser.ie ? '&nbsp;' : '<br>')
                         }
                         break;
                     case 'div':
@@ -10230,7 +10230,7 @@ UE.commands['inserthtml'] = {
             }
             range.txtToElmBoundary();
             //结束边界可能放到了br的前边，要把br包含进来
-            // x[xxx]<br/>
+            // x[xxx]<br>
             if(range.endContainer && range.endContainer.nodeType == 1){
                 tmpNode = range.endContainer.childNodes[range.endOffset];
                 if(tmpNode && domUtils.isBr(tmpNode)){
@@ -10242,7 +10242,7 @@ UE.commands['inserthtml'] = {
                 if(domUtils.isBoundaryNode(tmpNode,'firstChild') ){
                     tmpNode = range.endContainer;
                     if(range.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValue.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
-                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br/>')+'</p>';
+                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br>')+'</p>';
                         range.setStart(me.body.firstChild,0).collapse(true)
 
                     }
@@ -10394,7 +10394,7 @@ UE.commands['inserthtml'] = {
                 }else{
 
                     try{
-                        child.innerHTML = browser.ie ? domUtils.fillChar : '<br/>';
+                        child.innerHTML = browser.ie ? domUtils.fillChar : '<br>';
                     }catch(e){
                         range.setStartBefore(child);
                         domUtils.remove(child)
@@ -10876,7 +10876,7 @@ UE.plugin.register('background', function () {
             var me = this,
                 styles = (utils.cssRule(cssRuleId, me.document) || '').replace(/[\n\r]+/g, '').match(reg);
             if (styles) {
-                root.appendChild(UE.uNode.createElement('<p style="display:none;" data-background="' + utils.trim(styles[1].replace(/"/g, '').replace(/[\s]+/g, ' ')) + '"><br/></p>'));
+                root.appendChild(UE.uNode.createElement('<p style="display:none;" data-background="' + utils.trim(styles[1].replace(/"/g, '').replace(/[\s]+/g, ' ')) + '"><br></p>'));
             }
         },
         commands: {
@@ -13672,10 +13672,10 @@ UE.commands['cleardoc'] = {
             enterTag = me.options.enterTag,
             range = me.selection.getRange();
         if(enterTag == "br"){
-            me.body.innerHTML = "<br/>";
+            me.body.innerHTML = "<br>";
             range.setStart(me.body,0).setCursor();
         }else{
-            me.body.innerHTML = "<p>"+(ie ? "" : "<br/>")+"</p>";
+            me.body.innerHTML = "<p>"+(ie ? "" : "<br>")+"</p>";
             range.setStart(me.body.firstChild,0).setCursor(false,true);
         }
         setTimeout(function(){
@@ -14568,7 +14568,7 @@ UE.plugins['paste'] = function () {
                 for (var i = 0, bi; bi = brs[i++];) {
                     var pN = bi.parentNode;
                     if (pN.tagName == 'DIV' && pN.childNodes.length == 1) {
-                        pN.innerHTML = '<p><br/></p>';
+                        pN.innerHTML = '<p><br></p>';
                         domUtils.remove(pN);
                     }
                 }
@@ -15121,7 +15121,7 @@ UE.plugins['list'] = function () {
             //trace:3357
             //p不能为空
             if (!tmpP.firstChild()) {
-                tmpP.innerHTML(browser.ie ? '&nbsp;' : '<br/>')
+                tmpP.innerHTML(browser.ie ? '&nbsp;' : '<br>')
             }
             //去掉末尾的空白
             var p = li.firstChild();
@@ -15568,7 +15568,7 @@ UE.plugins['list'] = function () {
 
                                 span = me.document.createElement('span');
                                 range.insertNode(span);
-                                //判断pre是否是空的节点,如果是<p><br/></p>类型的空节点，干掉p标签防止它占位
+                                //判断pre是否是空的节点,如果是<p><br></p>类型的空节点，干掉p标签防止它占位
                                 if (domUtils.isEmptyBlock(pre)) {
                                     pre.innerHTML = '';
                                 }
@@ -16334,7 +16334,7 @@ UE.plugins['list'] = function () {
                     var first = me.body.firstChild;
                     //trace:1106 都删除空了，下边会报错，所以补充一个p占位
                     if(!first){
-                        me.body.innerHTML = '<p>'+(browser.ie?'':'<br/>')+'</p>';
+                        me.body.innerHTML = '<p>'+(browser.ie?'':'<br>')+'</p>';
                         first = me.body.firstChild;
                     }
 
@@ -16626,7 +16626,7 @@ UE.plugins['keystrokes'] = function() {
             }
             rng.txtToElmBoundary();
             //结束边界可能放到了br的前边，要把br包含进来
-            // x[xxx]<br/>
+            // x[xxx]<br>
             if(rng.endContainer && rng.endContainer.nodeType == 1){
                 tmpNode = rng.endContainer.childNodes[rng.endOffset];
                 if(tmpNode && domUtils.isBr(tmpNode)){
@@ -16639,7 +16639,7 @@ UE.plugins['keystrokes'] = function() {
                     tmpNode = rng.endContainer;
                     if(rng.endOffset == (tmpNode.nodeType == 3 ? tmpNode.nodeValue.length : tmpNode.childNodes.length) && domUtils.isBoundaryNode(tmpNode,'lastChild')){
                         me.fireEvent('saveScene');
-                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br/>')+'</p>';
+                        me.body.innerHTML = '<p>'+(browser.ie ? '' : '<br>')+'</p>';
                         rng.setStart(me.body.firstChild,0).setCursor(false,true);
                         me._selectionChange();
                         return;
@@ -16788,7 +16788,7 @@ UE.plugins['keystrokes'] = function() {
                 //处理当删除到body时，要重新给p标签展位
                 if(domUtils.isBody(rng.startContainer)){
                     var tmpNode = domUtils.createElement(me.document,'p',{
-                        'innerHTML' : browser.ie ? domUtils.fillChar : '<br/>'
+                        'innerHTML' : browser.ie ? domUtils.fillChar : '<br>'
                     });
                     rng.insertNode(tmpNode).setStart(tmpNode,0).setCursor(false,true);
                 }
@@ -18050,7 +18050,7 @@ UE.plugins['video'] = function (){
             }
         },
         setCellContent:function (cell, content) {
-            cell.innerHTML = content || (browser.ie ? domUtils.fillChar : "<br />");
+            cell.innerHTML = content || (browser.ie ? domUtils.fillChar : "<br>");
         },
         cloneCell:UETable.cloneCell,
         /**
@@ -18899,7 +18899,7 @@ UE.plugins['video'] = function (){
                 for (var r = 0; r < rowsNum; r++) {
                     html.push('<tr' + (r == 0 ? ' class="firstRow"':'') + '>');
                     for (var c = 0; c < colsNum; c++) {
-                        html.push('<td width="' + tdWidth + '"  vAlign="' + opt.tdvalign + '" >' + (browser.ie && browser.version < 11 ? domUtils.fillChar : '<br/>') + '</td>')
+                        html.push('<td width="' + tdWidth + '"  vAlign="' + opt.tdvalign + '" >' + (browser.ie && browser.version < 11 ? domUtils.fillChar : '<br>') + '</td>')
                     }
                     html.push('</tr>')
                 }
@@ -18939,7 +18939,7 @@ UE.plugins['video'] = function (){
             var table = getTableItemsByRange(this).table;
             if (table) {
                 var p = this.document.createElement("p");
-                p.innerHTML = browser.ie ? '&nbsp;' : '<br />';
+                p.innerHTML = browser.ie ? '&nbsp;' : '<br>';
                 table.parentNode.insertBefore(p, table);
                 this.selection.getRange().setStart(p, 0).setCursor();
             }
@@ -18958,7 +18958,7 @@ UE.plugins['video'] = function (){
                 var next = table.nextSibling;
                 if (!next) {
                     next = domUtils.createElement(this.document, 'p', {
-                        'innerHTML': browser.ie ? domUtils.fillChar : '<br/>'
+                        'innerHTML': browser.ie ? domUtils.fillChar : '<br>'
                     });
                     table.parentNode.insertBefore(next, table);
                 }
@@ -19014,7 +19014,7 @@ UE.plugins['video'] = function (){
             var table = getTableItemsByRange(this).table;
             if (table) {
                 var caption = this.document.createElement('caption');
-                caption.innerHTML = browser.ie ? domUtils.fillChar : '<br/>';
+                caption.innerHTML = browser.ie ? domUtils.fillChar : '<br>';
                 table.insertBefore(caption, table.firstChild);
                 var range = this.selection.getRange();
                 range.setStart(caption, 0).setCursor();
@@ -27529,7 +27529,7 @@ UE.ui = baidu.editor.ui = {};
             this.initUIBase();
         },
         getHtmlTpl: function (){
-            return '<br/>';
+            return '<br>';
         }
     };
     utils.inherits(Breakline, UIBase);

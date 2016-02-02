@@ -9,8 +9,8 @@
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
     <script src="../lang/zh-cn/zh-cn.js"></script>
-    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.1.0/styles/default.min.css">
-    <script src="//cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js?v=910"></script>
+    <link rel="stylesheet" href="../third-party/prism/prism.css">
+    <script src="../third-party/prism/prism.js"></script>
 
     <style>
         div#demo{
@@ -177,5 +177,12 @@
     }
 </script>
 </div>
+<script>
+    $('pre[class*="language"]').each(function(){
+        var _this = $(this);
+        _this.html('<code class="'+ _this.attr('class') +'">'+ _this.html() +'</code>');
+        _this.removeAttr('class');
+    })
+</script>
 </body>
 </html>

@@ -4,8 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>重置编辑器</title>
-    <script charset="utf-8" src="../ueditor.config.js"></script>
-    <script charset="utf-8" src="editor_api.js"></script>
+    <script src="../ueditor.config.js"></script>
+    <script src="editor_api.js"></script>
     <style>
         #simple {
             width: 1000px;
@@ -19,7 +19,7 @@
     <div class="content" id="simple"></div>
     <p><input type="button" onclick="simple()" value="重置编辑器内部参数"><span id="txt"></span></p>
     <p><input id="destroy" type="button" onclick="destroy()" value="销毁编辑器"></p>
-    <script charset="utf-8">
+    <script>
         var editor = UE.getEditor('simple');
         function simple() {
             if(editor){

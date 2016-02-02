@@ -17,11 +17,8 @@
 }
 
 .edui-default .edui-toolbar .edui-combox .edui-combox-body {
-    border: 1px solid #CCC;
-    background-color: white;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    border: 1px solid #2BB4D6;
+    background-color: #fff;
 }
 
 .edui-default .edui-toolbar .edui-combox-body .edui-splitborder {
@@ -33,21 +30,21 @@
 }
 
 .edui-default .edui-toolbar .edui-state-hover .edui-combox-body {
-    background-color: #fff5d4;
-    border: 1px solid #dcac6c;
+    background-color: #DDF2F7;
+    border: 1px solid #2BB4D6;
 }
 
 .edui-default .edui-toolbar .edui-state-hover .edui-combox-body .edui-arrow {
-    border-left: 1px solid #dcac6c;
+    border-left: 1px solid #2BB4D6;
 }
 
 .edui-default .edui-toolbar .edui-state-checked .edui-combox-body {
-    background-color: #FFE69F;
-    border: 1px solid #DCAC6C;
+    background-color: #DDF2F7;
+    border: 1px solid #2BB4D6;
 }
 
 .edui-toolbar .edui-state-checked .edui-combox-body .edui-arrow {
-    border-left: 1px solid #DCAC6C;
+    border-left: 1px solid #2BB4D6;
 }
 
 .edui-toolbar .edui-state-disabled .edui-combox-body {

@@ -14,18 +14,15 @@
 }
 
 .edui-default .edui-toolbar .edui-button .edui-state-hover .edui-button-wrap {
-    background-color: #fff5d4;
+    background-color: #DDF2F7;
     padding: 0;
-    border: 1px solid #dcac6c;
+    border: 1px solid #2BB4D6;
 }
 
 .edui-default .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap {
-    background-color: #ffe69f;
+    background-color: #DDF2F7;
     padding: 0;
-    border: 1px solid #dcac6c;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    border: 1px solid #2BB4D6;
 }
 
 .edui-default .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {

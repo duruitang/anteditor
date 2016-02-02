@@ -15,7 +15,7 @@
         },
         getHtmlTpl: function (){
             return '<div id="##" class="edui-message %%">' +
-            ' <div id="##_closer" class="edui-message-closer">×</div>' +
+//            ' <div id="##_closer" class="edui-message-closer">×</div>' +
             ' <div id="##_body" class="edui-message-body edui-message-type-info">' +
             ' <iframe style="position:absolute;z-index:-1;left:0;top:0;background-color: transparent;" frameborder="0" width="100%" height="100%" src="about:blank"></iframe>' +
             ' <div class="edui-shadow"></div>' +

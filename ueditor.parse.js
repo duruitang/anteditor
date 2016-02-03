@@ -66,6 +66,6 @@
     }
     var   baseURL = getUEBasePath() + '_parse/';
     for (var i=0,pi;pi = paths[i++];) {
-        document.write('<script type="text/javascript" src="'+ baseURL + pi +'"></script>');
+        document.write('<script src="'+ baseURL + pi +'"></script>');
     }
 })();
